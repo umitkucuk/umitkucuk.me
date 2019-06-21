@@ -31,7 +31,7 @@ const Footer = () => (
           Copyright © {new Date().getFullYear()} Ümit Küçük.
           <Link href="/">
             <a>
-              It was built with pretty much <span>❤</span>
+              It was built with much <span>❤</span>
             </a>
           </Link>
         </p>
