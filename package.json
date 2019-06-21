@@ -1,0 +1,52 @@
+{
+  "name": "umitkucuk.me",
+  "version": "0.1.0",
+  "description": "Ümit Küçük Personal Website",
+  "main": "index.js",
+  "author": "Ümit Küçük",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export",
+    "now-build": "next build",
+    "now-deploy": "now --target production"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.17",
+    "@fortawesome/free-brands-svg-icons": "^5.8.1",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "@mdx-js/mdx": "^1.0.20",
+    "@next/bundle-analyzer": "^8.1.0",
+    "@zeit/next-mdx": "^1.2.0",
+    "fontfaceobserver": "^2.1.0",
+    "next": "^8.1.0",
+    "nprogress": "^0.2.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-styled-flexboxgrid": "^3.1.0",
+    "styled-components": "^4.3.1",
+    "styled-css-grid": "^1.2.1",
+    "styled-normalize": "^8.0.6"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.2",
+    "babel-plugin-styled-components": "^1.10.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^5.0.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.13.0",
+    "husky": "^2.4.1",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}
