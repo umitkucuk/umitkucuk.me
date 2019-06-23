@@ -1,12 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Page from '../../components/page'
 
-export default class extends Component {
-  render() {
-    return (
-      <Page>
-        <h1>About page is coming very soon...</h1>
-      </Page>
-    )
-  }
+export default () => {
+  return (
+    <Page>
+      <h1>About page is coming very soon...</h1>
+    </Page>
+  )
 }
