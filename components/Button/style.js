@@ -1,7 +1,4 @@
-import React from 'react'
-import Link from 'next/link'
 import styled, { css } from 'styled-components'
-import * as S from './style'
 
 const button = css`
   border: none;
@@ -30,12 +27,7 @@ export const PrimaryButton = styled.button`
   }
 `
 
-export const SecondaryButton = styled.button`
-  ${button};
-  color: #fff;
-`
-
-export const PrimaryLink = styled.a`
+export const PrimaryButtonLink = styled.a`
   ${button};
   color: #fff;
   background-color: ${props => props.theme.color.primary};
@@ -44,11 +36,3 @@ export const PrimaryLink = styled.a`
     opacity: 0.9;
   }
 `
-
-export const PrimaryButtonLink = ({ href, hrefAs, children, prefetch }) => {
-  return (
-    <Link href={href} as={hrefAs} prefetch={prefetch}>
-      <S.PrimaryButtonLink>{children}</S.PrimaryButtonLink>
-    </Link>
-  )
-}
