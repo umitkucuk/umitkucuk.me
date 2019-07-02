@@ -19,7 +19,7 @@ export default () => {
         <Grid columns={2} gap="15px">
           <Cell>
             <Link href="/">
-              <S.Logo src="/static/logo.jpg" alt="Ümit Küçük" />
+              <S.Logo>Ümit Küçük</S.Logo>
             </Link>
           </Cell>
           <Cell>

@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { Unselectable } from '../Globals'
 
 export const Header = styled.header`
   background-color: #fff;
@@ -10,11 +9,12 @@ export const Header = styled.header`
   z-index: 100;
 `
 
-export const Logo = styled.img`
-  ${Unselectable};
+export const Logo = styled.a`
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 2rem;
   cursor: pointer;
-  padding: 20px;
-  width: 20%;
 `
 
 export const Navbar = styled.nav`
