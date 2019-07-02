@@ -9,7 +9,19 @@ const withBundleAnalyzer = bundleAnalyzer({ enabled: process.env.ANALYZE === 'tr
 
 const nextConfig = {
   target: 'serverless',
-  pageExtensions: ['jsx', 'js', 'mdx']
+  pageExtensions: ['jsx', 'js', 'mdx'],
+  analyzeServer: ['server', 'both'].includes(process.env.BUNDLE_ANALYZE),
+  analyzeBrowser: ['browser', 'both'].includes(process.env.BUNDLE_ANALYZE),
+  bundleAnalyzerConfig: {
+    server: {
+      analyzerMode: 'static',
+      reportFilename: '../../bundles/server.html'
+    },
+    browser: {
+      analyzerMode: 'static',
+      reportFilename: '../bundles/client.html'
+    }
+  }
 }
 
 module.exports = withMDX(withBundleAnalyzer(nextConfig))
