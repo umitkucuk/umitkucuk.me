@@ -9,7 +9,7 @@ export default props => {
   const { item } = props
 
   const latestPosts = posts.slice(posts.length - item, posts.length)
-  latestPosts.reverse
+  latestPosts.reverse()
 
   return (
     <Container>

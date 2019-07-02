@@ -11,7 +11,7 @@ const Footer = () => (
       <S.GetInTouch>
         <H1>Get in touch</H1>
         <H4>
-          Do you have a project or just a question? <br /> Feel free to contact me.
+          Do you have a project idea or just a question? <br /> Feel free to contact me.
         </H4>
         <PrimaryLink href="mailto:umittkucukk@gmail.com">Email me</PrimaryLink>
         <S.SocialLinks>
@@ -29,8 +29,8 @@ const Footer = () => (
       <S.Copyright>
         <p>
           Copyright © {new Date().getFullYear()} Ümit Küçük.
-          <Link to="/">
-            <a href="/">
+          <Link href="/">
+            <a>
               It was built with much <span>❤</span>
             </a>
           </Link>

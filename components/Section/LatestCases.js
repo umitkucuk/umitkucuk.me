@@ -13,10 +13,7 @@ const CaseStudies = () => (
       </Col>
     </Row>
     <Row>
-      <Col xs={12} lg={6}>
-        <Case />
-      </Col>
-      <Col xs={12} lg={6}>
+      <Col lg={6}>
         <Case />
       </Col>
     </Row>
