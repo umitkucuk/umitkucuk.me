@@ -42,7 +42,7 @@ export default class Page extends React.Component {
 Page.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
-  children: PropTypes.shape().isRequired
+  children: PropTypes.node.isRequired
 }
 
 Page.defaultProps = {
