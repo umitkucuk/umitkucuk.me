@@ -1,6 +1,10 @@
 import { Container } from '../../components/Globals'
+import Page from '../../components/page'
 
 <Container>XXX</Container>
+
+<Page>
+<Container>
 
 Recently [Next.js 8](/blog/next-8) was introduced. The release included a massive build-time memory usage reduction. This blog post will explore how we have helped optimize webpack for the community.
 
@@ -65,3 +69,6 @@ With this new behavior the chunks being allocated were reduced to **_182 KB_** o
 This optimization was introduced on webpack, meaning not just Next.js users, but all webpack users will benefit from these optimizations.
 
 We will actively continue to improve Next.js and webpack memory usage and performance.
+
+</Container>
+</Page>
