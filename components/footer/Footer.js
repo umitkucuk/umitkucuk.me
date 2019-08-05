@@ -29,7 +29,7 @@ const Footer = () => (
       <S.Copyright>
         <p>
           Copyright © {new Date().getFullYear()} Ümit Küçük.
-          <Link href="/">
+          <Link href="/built-with">
             <a>
               It was built with much <span>❤</span>
             </a>
