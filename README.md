@@ -7,13 +7,13 @@
 
 ## Installation
 
-Install all packages with:
+Installing all packages:
 
 ```
 $ yarn install
 ```
 
-Then, you can start the project in development mode with:
+Starting the project in development mode:
 
 ```
 $ yarn dev
