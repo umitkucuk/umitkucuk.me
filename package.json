@@ -1,58 +1,52 @@
 {
-  "name": "umitkucuk.me",
+  "name": "umitkucuk",
   "version": "0.1.0",
-  "description": "Ümit Küçük Personal Website",
-  "main": "index.js",
-  "author": "Ümit Küçük",
-  "license": "MIT",
+  "private": true,
   "scripts": {
-    "dev": "next",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export": "next export",
-    "lint": "eslint",
-    "now-build": "next build",
-    "now-deploy": "now --target production",
-    "analyze": "cross-env BUNDLE_ANALYZE=both yarn build",
-    "analyze:server": "cross-env BUNDLE_ANALYZE=server yarn build",
-    "analyze:browser": "cross-env BUNDLE_ANALYZE=browser yarn build"
+    "format": "prettier --write .",
+    "lint": "eslint . --ext ts --ext tsx --ext js",
+    "svgr": "svgr -d ./assets/icons ./assets/icons --icon --replace-attr-values '#000=currentColor,#fff=currentColor' --typescript"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.17",
-    "@fortawesome/free-brands-svg-icons": "^5.8.1",
-    "@fortawesome/react-fontawesome": "^0.1.4",
-    "@mdx-js/mdx": "^1.0.20",
-    "@next/bundle-analyzer": "^8.1.0",
-    "@zeit/next-bundle-analyzer": "^0.1.2",
-    "@zeit/next-mdx": "^1.2.0",
-    "cross-env": "^5.2.0",
-    "fontfaceobserver": "^2.1.0",
-    "next": "^8.1.0",
-    "nprogress": "^0.2.0",
-    "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-styled-flexboxgrid": "^3.1.0",
-    "styled-components": "^4.3.1",
-    "styled-css-grid": "^1.2.1",
-    "styled-normalize": "^8.0.6"
+    "next": "11.0.1",
+    "polished": "4.1.3",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-is": "17.0.2",
+    "styled-components": "5.3.0"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.2",
-    "babel-plugin-styled-components": "^1.10.1",
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-prettier": "^5.0.0",
-    "eslint-plugin-import": "^2.17.3",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.13.0",
-    "husky": "^2.4.1",
-    "prettier": "^1.18.2",
-    "pretty-quick": "^1.11.1"
+    "@svgr/cli": "5.5.0",
+    "@types/react": "17.0.14",
+    "@types/styled-components": "5.1.11",
+    "@typescript-eslint/eslint-plugin": "4.28.2",
+    "@typescript-eslint/parser": "4.28.2",
+    "babel-plugin-styled-components": "1.13.2",
+    "eslint": "7.30.0",
+    "eslint-config-next": "11.0.1",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-import": "2.23.4",
+    "eslint-plugin-jsx-a11y": "6.4.1",
+    "eslint-plugin-react": "7.24.0",
+    "eslint-plugin-react-hooks": "4.2.0",
+    "husky": "7.0.1",
+    "lint-staged": "11.0.0",
+    "prettier": "2.3.2",
+    "typescript": "4.3.5"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged"
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn run type-check"
     }
+  },
+  "lint-staged": {
+    "*.@(ts|tsx)": [
+      "yarn lint",
+      "yarn format"
+    ]
   }
 }

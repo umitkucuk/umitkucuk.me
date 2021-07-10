@@ -1,6 +1,0 @@
-{
-  "version": 2,
-  "name": "umitkucuk.me",
-  "alias": ["umitkucuk.me", "www.umitkucuk.me"],
-  "builds": [{ "src": "next.config.js", "use": "@now/next" }]
-}
