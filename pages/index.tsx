@@ -1,8 +1,10 @@
 import Layout from 'layout'
+import { ProfilePhoto } from 'components'
 
 const Home = () => {
   return (
     <Layout>
+      <ProfilePhoto />
       <h1>{`Hi, I'm Ümit Küçük.`}</h1>
       <h1>A Front-End Engineer.</h1>
       <br />
