@@ -15,6 +15,8 @@ const renderSVG = (name: string) => {
       return <SVGIcon.Github />
     case 'linkedin':
       return <SVGIcon.Linkedin />
+    case 'spotify':
+      return <SVGIcon.Spotify />
     case 'twitter':
       return <SVGIcon.Twitter />
     default:

@@ -41,6 +41,15 @@ const Footer = () => {
         >
           <Icon name="github" size={2.4} />
         </SocialLink>
+        <SocialLink
+          href="https://open.spotify.com/user/umitkucuk"
+          title="My Spotify profile"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Spotify"
+        >
+          <Icon name="spotify" size={2.4} />
+        </SocialLink>
       </SocialLinks>
 
       <p>

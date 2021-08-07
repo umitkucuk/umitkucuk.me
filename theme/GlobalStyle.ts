@@ -29,12 +29,13 @@ const GlobalStyle = createGlobalStyle`
 
   p {
     margin: 0 0 0.8rem 0;
+    line-height: 1.6;
   }
 
   a {
     color: #000;
     text-decoration: none;
-    padding: 0.2rem 0.4rem;
+    padding: 0.2rem 0;
     box-sizing: border-box;
     border-bottom: 2px solid #000;
 
