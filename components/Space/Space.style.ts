@@ -6,9 +6,21 @@ const twinkMove = keyframes`
   to { background-position: -10000px 5000px; }
 `
 
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`
+
 export const SpaceWrapper = styled.div`
+  position: relative;
   height: 100vh;
   width: 100vw;
+  background-color: #000;
+  overflow: hidden;
 `
 
 export const Stars = styled.div`
@@ -21,7 +33,9 @@ export const Stars = styled.div`
   width: 100%;
   height: 100%;
   z-index: 0;
-  background: #000 url('/img/stars.png') repeat top center;
+  background: #000 url('/img/stars.png') repeat center;
+  animation: ${rotate} 500s linear infinite;
+  will-change: transform;
 `
 
 export const Twinkling = styled.div`
@@ -35,7 +49,7 @@ export const Twinkling = styled.div`
   display: block;
   z-index: 1;
   animation: ${twinkMove} 600s linear infinite;
-  background: transparent url('/img/twinkling.png') repeat top center;
+  background: transparent url('/img/twinkling.png') repeat center;
 
   @media only screen and (max-width: 800px) {
     background-size: 80px;
